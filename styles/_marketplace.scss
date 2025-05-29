@@ -1,0 +1,122 @@
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.333% - 1.5rem); // 3 per row
+    max-width: calc(33.333% - 1.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 1.5rem); // 2 per row
+    max-width: calc(50% - 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; // 1 per row
+    max-width: 100%;
+  }
+}
+
+.main {
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 calc(25% - 1.5rem); // Max 4 cards per row to fit figma design 
+  max-width: calc(25% - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-image {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .card-footer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    .template-name {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .creator-name {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .plus {
+      align-self: flex-end;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// See more card
+.card.see-more-card {
+  background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #292942, #3b3b5c);
+  }
+
+  .see-more-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: '→';
+      font-size: 1.5rem;
+      margin-top: 0.4rem;
+    }
+  }
+}

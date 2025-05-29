@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="module" src="../components/nav_bar.js"></script>
+    <script type="module" src="../components/footer.js"></script>
+    <link rel="stylesheet" href="../styles/main.css"/>
+    <title>Sign ups</title>
+  </head>
+
+  <body>
+    <!-- Nav bar-->
+    <comp-nav-bar></comp-nav-bar>
+
+    <div class="main">
+      <h1 class="main_heading">Sign Up</h1>
+      <p class="main_subheading">Join --name-- today and boost your productivity.</p>
+
+      <div class="form_container">
+        <div class="plan plan--form sign-up">
+          <!-- Images -->
+          <div class="background_images">
+            <img src="../assets/bubbles.png" alt="Image" class="left_image" />
+            <img src="../assets/bubbles.png" alt="Image" class="right_image" />
+          </div>
+
+          <div class="title_container">
+            <h2 class="title">Create Your Account</h2>
+          </div>
+          <div class="divider"></div>
+
+          <form class="sign-up__form" action="/submit" method="POST">
+            <div class="sign-up_first-name">
+              <label for="name" class="first_name">Full Name</label>
+              <input type="text" id="name" name="name" class="user_input" required/>
+            </div>
+            <div class="sign-up_last-name">
+              <label for="name" class="last_name">Full Name</label>
+              <input type="text" id="name" name="last_name" class="user_input" required/>
+            </div>
+
+            <div class="sign-up_email">
+              <label for="email" class="email">Email Address</label>
+              <input type="email" id="email" name="email" class="user_input" required/>
+            </div>
+
+            <div class="sign-up_password">
+              <label for="password" class="password">Password</label>
+              <input type="password" id="password" name="password" class="user_input" required/>
+            </div>
+
+            <!-- Replacing dropdown with buttons -->
+            <div class="sign-up__form-group">
+              <span class="sign-up__label">Choose Plan</span>
+              <div class="sign-up__plan-options">
+
+                <input type="radio" id="plan-standard" name="plan" value="standard"/>
+                <label for="plan-standard" class="standard_selection">Standard - $6.99</label>
+
+                <input type="radio" id="plan-premium" name="plan" value="premium"/>
+                <label for="plan-premium" class="premium_selection">Premium - $10.99</label>
+              </div>
+            </div>
+
+            <button type="submit" class="trial_btn">Begin your 30 day trial</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <comp-footer></comp-footer>
+  </body>
+</html>

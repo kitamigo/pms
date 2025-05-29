@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="module" src="../components/nav_bar.js"></script>
+    <script type="module" src="../components/footer.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+    <title>Marketplace</title>
+  </head>
+
+<body>
+
+  <!-- Nav Bar -->
+  <comp-nav-bar></comp-nav-bar>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Plugin cards -->
+    <section class="section">
+      <h2>Plugins</h2>
+      <div class="grid" id="plugins-grid">
+      </div>
+    </section>
+
+    <!-- Theme cards -->
+    <section class="section">
+      <h2>Themes</h2>
+      <div class="grid" id="themes-grid">
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <comp-footer></comp-footer>
+
+  <!-- Card Template Script -->
+<script src="../components/marketplace_card.js"></script>
+
+</body>
+</html>
